@@ -6,17 +6,14 @@ extern void __stginit_Option(void);
 #endif
 #include <stdio.h>
 
-void hs_init_c(int argc, char *argv[])
-{
-    hs_init(&argc, &argv);
+void hs_init_c(int argc, char *argv[]) {
+  hs_init(&argc, &argv);
 #ifdef __GLASGOW_HASKELL__
-    hs_add_root(__stginit_Option);
+  hs_add_root(__stginit_Option);
 #endif
 }
 
-void hs_exit_c() {
-    hs_exit();
-}
+void hs_exit_c() { hs_exit(); }
 %}
 
 extern
