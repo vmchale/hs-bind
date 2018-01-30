@@ -1,6 +1,6 @@
 #define STUB "hs/Option_stub.h"
 
-#define STDINIT __stginit_Option
+#define STGINIT __stginit_Option
 
 %{^
 #include <HsFFI.h>
@@ -13,7 +13,7 @@ extern void STGINIT(void);
 void hs_init_c(int argc, char *argv[]) {
   hs_init(&argc, &argv);
 #ifdef __GLASGOW_HASKELL__
-  hs_add_root(STG_INIT);
+  hs_add_root(STGINIT);
 #endif
 }
 
