@@ -1,4 +1,3 @@
-// FIXME allow other module names
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
