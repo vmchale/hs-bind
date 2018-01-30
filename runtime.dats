@@ -1,11 +1,8 @@
-#define STUB "hs/Option_stub.h"
-
 #define STGINIT __stginit_Option
 
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-#include STUB
 extern void STGINIT(void);
 #endif
 #include <stdio.h>
