@@ -1,16 +1,19 @@
-// FIXME allow other module names
+#define STUB "hs/Option_stub.h"
+
+#define STDINIT __stginit_Option
+
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-#include "hs/Option_stub.h"
-extern void __stginit_Option(void);
+#include STUB
+extern void STGINIT(void);
 #endif
 #include <stdio.h>
 
 void hs_init_c(int argc, char *argv[]) {
   hs_init(&argc, &argv);
 #ifdef __GLASGOW_HASKELL__
-  hs_add_root(__stginit_Option);
+  hs_add_root(STG_INIT);
 #endif
 }
 

@@ -1,8 +1,8 @@
 let dep =
-  { libName = "hs-bind-0.3.2"
+  { libName = "hs-bind-0.3.3"
   , dir = ".atspkg/contrib"
-  , url = "https://github.com/vmchale/hs-bind/archive/0.3.2.tar.gz"
-  , libVersion = [0,3,2]
+  , url = "https://github.com/vmchale/hs-bind/archive/0.3.3.tar.gz"
+  , libVersion = [0,3,3]
   }
 
 in dep
