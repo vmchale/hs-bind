@@ -1,16 +1,15 @@
-#define STGINIT __stginit_Option
-
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-extern void STGINIT(void);
+#include "hs/Foreign_stub.h"
+extern void __stginit_Foreign(void);
 #endif
 #include <stdio.h>
 
 void hs_init_c(int argc, char *argv[]) {
   hs_init(&argc, &argv);
 #ifdef __GLASGOW_HASKELL__
-  hs_add_root(STGINIT);
+  hs_add_root(__stginit_Foreign);
 #endif
 }
 
