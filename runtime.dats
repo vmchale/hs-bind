@@ -1,7 +1,7 @@
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-#include "hs/MODULE_stub.h"
+#include MODULE_STUB
 extern void __stginit_MODULE(void);
 #endif
 #include <stdio.h>
