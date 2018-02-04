@@ -1,19 +1,16 @@
 %{^
-#ifndef STUB_H
-#define STUB_H "hs/Foreign_stub.h"
-#endif
 
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
 #include STUB_H
-extern void __stginit_Foreign(void);
+extern void STG_INIT(void);
 #endif
 #include <stdio.h>
 
 void hs_init_c(int argc, char *argv[]) {
   hs_init(&argc, &argv);
 #ifdef __GLASGOW_HASKELL__
-  hs_add_root(__stginit_Foreign);
+  hs_add_root(STG_INIT);
 #endif
 }
 
