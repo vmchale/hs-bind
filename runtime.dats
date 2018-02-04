@@ -1,7 +1,9 @@
+#define STUB_H "hs/Foreign_stub.h"
+
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-#include "hs/Foreign_stub.h"
+#include STUB_H
 extern void __stginit_Foreign(void);
 #endif
 #include <stdio.h>
@@ -17,7 +19,7 @@ void hs_exit_c() { hs_exit(); }
 %}
 
 extern
-fun hs_init {n:int} (argc : int(n), argv : !argv(n)) : void =
+fun hs_init {n:int}(argc : int(n), argv : !argv(n)) : void =
   "mac#hs_init_c"
 
 extern
