@@ -1,6 +1,8 @@
-#define STUB_H "hs/Foreign_stub.h"
-
 %{^
+#ifndef STUB_H
+#define STUB_H "hs/Foreign_stub.h"
+#endif
+
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
 #include STUB_H
