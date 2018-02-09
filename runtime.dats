@@ -1,5 +1,4 @@
 %{^
-
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
 #include STUB_H
