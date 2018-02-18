@@ -1,4 +1,4 @@
-let dep = https://raw.githubusercontent.com/vmchale/atspkg/dhall/pkgs/default-pkg.dhall
+let dep = https://raw.githubusercontent.com/vmchale/atspkg/master/dhall/default-pkg.dhall
 
 in dep //
   { libName = "hs-bind"
