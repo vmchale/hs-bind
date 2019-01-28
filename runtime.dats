@@ -1,7 +1,7 @@
 %{^
 #include <HsFFI.h>
 #ifdef __GLASGOW_HASKELL__
-#ifdef __GLASGOW_HASKELL__ <= 802
+#if __GLASGOW_HASKELL__ <= 802
 #include STUB_H
 extern void STG_INIT(void);
 #endif
