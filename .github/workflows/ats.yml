@@ -10,6 +10,6 @@ jobs:
         run: |
           export PATH=$HOME/.local/bin:$PATH
           atspkg check pkg.dhall
-name: "Haskell CI"
+name: "ATS CI"
 on:
   - push
