@@ -20,10 +20,12 @@ void hs_init_c(int argc, char *argv[]) {
 void hs_exit_c() { hs_exit(); }
 %}
 
+absview haskell_runtime_proof
+
 extern
-fun hs_init {n:int}(argc : int(n), argv : !argv(n)) : void =
+fun hs_init {n:int}(argc : int(n), argv : !argv(n)) : (haskell_runtime_proof | void) =
   "mac#hs_init_c"
 
 extern
-fun hs_exit() : void =
+fun hs_exit(haskell_runtime_proof) : void =
   "mac#hs_exit_c"
