@@ -3,13 +3,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: "actions/checkout@v1"
-      - name: "Install atspkg"
+      - name: Install atspkg
         run: |
           curl -sSl https://raw.githubusercontent.com/vmchale/atspkg/master/bash/install.sh | sh -s
-      - name: "Check pkg.dhall"
+      - name: Check pkg.dhall
         run: |
           export PATH=$HOME/.local/bin:$PATH
           atspkg check pkg.dhall
-name: "ATS CI"
+name: ATS CI
 on:
   - push
